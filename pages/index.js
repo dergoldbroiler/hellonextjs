@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css';
 
+import Link from 'next/link';
+import { Welcome } from '../components/Welcome';
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -10,12 +13,10 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <Welcome h1="Hello Next" />
 
         <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
+        Read <Link href="/posts/first-post">this page!</Link>
         </p>
 
         <div className={styles.grid}>
