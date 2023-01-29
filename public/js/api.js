@@ -13,7 +13,7 @@ const getIdFromFilename = (filename) => {
 }
 
 
-const blogpath = path.join(process.cwd(), 'content');
+const blogpath = path.join(process.cwd(), '_posts', 'blog');
 
 
 function getData(){
