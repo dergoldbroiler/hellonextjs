@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { Welcome } from '../components/Welcome';
 import { Singlepostlistelement } from '../components/Singlepostlistelement';
 import { useEffect, useState } from 'react'
-import netlifyAuth from '../public/js/netlifyAuth.js'
+import netlifyAuth from '../public/js/netlifyAuth'
 import {getData} from '../public/js/api';
 
 export default function Home({posts_list}) {
