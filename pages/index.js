@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script';
 import styles from '../styles/Home.module.css';
 import { Layout } from '../components/Layout';
 import matter from 'gray-matter'
@@ -26,6 +27,10 @@ export default function Home({posts_list}) {
         <Head>
           <title>Home</title>
         </Head>
+
+        <Script
+        src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        />
 
       <main>
         <Welcome h2="Hello Next Blog List" />
