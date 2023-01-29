@@ -1,8 +1,8 @@
 import {React} from 'react';
 
 
-export const Welcome = ({h1}) => {
+export const Welcome = ({h2}) => {
     return (
-        <h1>{h1}</h1>
+        <h2>{h2}</h2>
     );
 }
