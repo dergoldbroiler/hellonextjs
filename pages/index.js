@@ -6,7 +6,8 @@ import matter from 'gray-matter'
 import Link from 'next/link';
 import { Welcome } from '../components/Welcome';
 import { Singlepostlistelement } from '../components/Singlepostlistelement';
-
+import { useEffect, useState } from 'react'
+import netlifyAuth from '../public/js/netlifyAuth.js'
 import {getData} from '../public/js/api';
 
 export default function Home({posts_list}) {
@@ -16,12 +17,21 @@ export default function Home({posts_list}) {
          <Singlepostlistelement title={post.title} id={post.id} key={post.id}/>
        
     );
+    
+    let [loggedIn, setLoggedIn] = useState(netlifyAuth.isAuthenticated)
 
+useEffect(() => {
+  netlifyAuth.initialize((user) => {
+    setLoggedIn(!!user)
+  })
+}, [loggedIn])
 
   return (
 
    
     <Layout home={true}>
+
+     
       
     <div className={styles.home_container}>
         <Head>
